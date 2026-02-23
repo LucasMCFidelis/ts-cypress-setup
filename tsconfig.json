@@ -1,25 +1,23 @@
 {
   "compilerOptions": {
-    /* Base */
     "target": "ES2021",
     "lib": ["ES2021", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
 
-    /* Tipos */
-    "types": ["cypress", "node"],
+    "types": ["cypress", "node", "@badeball/cypress-cucumber-preprocessor"],
 
-    /* Qualidade */
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
 
-    /* Interop */
-    "esModuleInterop": true
+    "paths": {
+      "@badeball/cypress-cucumber-preprocessor/*": [
+        "./node_modules/@badeball/cypress-cucumber-preprocessor/dist/subpath-entrypoints/*"
+      ]
+    }
   },
-  "include": [
-    "cypress/**/*.ts",
-    "cypress.config.ts"
-  ]
+  "include": ["cypress/**/*.ts", "cypress.config.ts"]
 }

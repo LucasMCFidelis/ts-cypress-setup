@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.js",
-    "lint:cypress": "eslint cypress --ext .ts"
+    "lint:cypress": "eslint cypress --ext .ts",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +20,17 @@
     "eslint": "^9.39.2",
     "eslint-plugin-cypress": "^5.2.0",
     "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-unused-imports": "^4.3.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.50.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8"
+  },
+  "@badeball/cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/steps/",
+    "nonGlobalStepDefinitions": false
   }
 }

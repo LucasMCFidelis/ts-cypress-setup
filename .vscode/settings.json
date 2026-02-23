@@ -1,16 +1,5 @@
 {
-  "eslint.useFlatConfig": true,
-
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-
-  "editor.formatOnSave": false
+  "cucumberautocomplete.steps": ["cypress/e2e/steps/**/*.ts"],
+  "cucumberautocomplete.syncfeatures": "cypress/e2e/features/**/*.feature",
+  "cucumberautocomplete.strictGherkinCompletion": true
 }

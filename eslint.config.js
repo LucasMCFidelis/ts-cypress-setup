@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import cypress from "eslint-plugin-cypress";
+import prettierPlugin from "eslint-plugin-prettier";
 import importPlugin from "eslint-plugin-import";
 import unusedImports from "eslint-plugin-unused-imports";
 
@@ -54,16 +55,6 @@ export default [
         },
       ],
 
-      /* Style */
-      quotes: [
-        "error",
-        "single",
-        {
-          avoidEscape: true,
-          allowTemplateLiterals: false,
-        },
-      ],
-
       "no-console": "off",
     },
   },
@@ -84,4 +75,6 @@ export default [
       },
     },
   },
+
+  prettierConfig,
 ];
