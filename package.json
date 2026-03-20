@@ -28,7 +28,12 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8"
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "glob": "^13.0.6"
+  },
+  "overrides": {
+    "diff": "^8.0.2",
+    "serialize-javascript": "^7.0.2"
   },
   "@badeball/cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/e2e/steps/",
